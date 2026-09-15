@@ -1,11 +1,9 @@
 # ╔══════════════════════════════════════════════════════════════════════╗
 # ║              GitVitae — Portfolio Configuration                      ║
-# ║  This is the only file you need to edit.                             ║
-# ║  Run  pnpm check-config  to catch mistakes before deploying.         ║
 # ╚══════════════════════════════════════════════════════════════════════╝
 
 siteMode: "portfolio"
-siteUrl:  "https://eshwarmech.github.io/Eshwar-Murugaiyan"
+siteUrl:  "https://eshwarmech.github.io/Eshwar_Murugaiyan_Portfolio"
 showPoweredBy: true
 
 # ── Identity ───────────────────────────────────────────── (required) ──
@@ -16,6 +14,9 @@ email: "eshwar.murugaiyan@gmail.com"
 phone: "+44 7587737044"
 location: "United Kingdom"
 LinkedinUrl: "https://www.linkedin.com/in/eshwar-murugaiyan-104655299"
+
+# ── PROFILE PHOTO ──────────────────────────────────────────────────────
+avatarUrl: "https://raw.githubusercontent.com/EshwarMech/Eshwar_Murugaiyan_Portfolio/main/public/IMG_5434.JPG"
 
 # ── Resume download ────────────────────────────────────────────────────
 # resumeUrl: "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
@@ -37,7 +38,7 @@ contactFormEndpoint: ""
 # ── Section visibility ─────────────────────────────────────────────────
 sections:
   - { id: about,          show: true  }
-  - { id: stats,          show: false }
+  - { id: stats,          show: true  }
   - { id: skills,         show: true  }
   - { id: languages,      show: true  }
   - { id: experience,     show: true  }
@@ -63,7 +64,7 @@ about: |
 
 # ── Stats ──────────────────────────────────────────────────────────────
 stats:
-  - { label: "Engineering Projects", value: 6, suffix: "+" }
+  - { label: "Engineering Projects", value: 5, suffix: "+" }
   - { label: "CAD Tools",            value: 3, suffix: ""  }
   - { label: "Publications",         value: 1, suffix: ""  }
   - { label: "Years Hands-On",       value: 3, suffix: "+" }
@@ -175,42 +176,36 @@ certifications:
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/cee5edb45195b218b253a879446835a9d2c393876980062e1d8c8df97c7f1835?u=83331314"
-    badgeUrl: ""
     tags: [CAD, SolidWorks, Design]
 
   - title: "CATIA V5 Certification"
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/89c79f2742b48672f78cdba3615273a5896daaf656dc6cc5cfcb9cfc70d351d9?u=83331314"
-    badgeUrl: ""
     tags: [CAD, CATIA, Design]
 
   - title: "AutoCAD Certification"
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/38982a8434dabe25c7ea0702ab5d8671aa535c43d9d438fc55e3524c89905539"
-    badgeUrl: ""
     tags: [CAD, AutoCAD, Design]
 
   - title: "Python Certification"
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/6437a5d2c13ca8c2c423898465b0608ac5cd926a4ead6509ceffff024c5477ef"
-    badgeUrl: ""
     tags: [Programming, Python]
 
   - title: "MATLAB/Simulink Certification"
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/a3cb89399df8dfff804c724fdac5e2a1ef11925bc294b093d8642fbf5d24f689?u=83331314"
-    badgeUrl: ""
     tags: [Simulation, MATLAB, Control]
 
   - title: "Siemens Ladder Logic Certification"
     issuer: "LinkedIn Learning"
     date: "2024"
     credentialUrl: "https://www.linkedin.com/learning/certificates/836dea3f5200ee3317e8e8dced3209f1b14972863914b6209647056fe27f99db"
-    badgeUrl: ""
     tags: [PLC, Siemens, Automation]
 
 # ── Publications ───────────────────────────────────────────────────────

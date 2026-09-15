@@ -4,307 +4,230 @@
 # ║  Run  pnpm check-config  to catch mistakes before deploying.         ║
 # ╚══════════════════════════════════════════════════════════════════════╝
 
-# ╔══════════════════════════════════════════════════════════════════════╗
-# ║  ** FIRST THING TO CHANGE **                                         ║
-# ║                                                                      ║
-# ║  siteMode: "landing"  → shows the GitVitae intro page (default)      ║
-# ║  siteMode: "portfolio" → shows YOUR portfolio                        ║
-# ║                                                                      ║
-# ║  Change it to "portfolio" once you have filled in your details.      ║
-# ╚══════════════════════════════════════════════════════════════════════╝
-siteMode: "landing"   # ← CHANGE THIS to "portfolio"
-siteUrl:  "https://yourusername.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
-showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
+siteMode: "portfolio"
+siteUrl:  "https://eshwarmech.github.io/Eshwar-Murugaiyan"
+showPoweredBy: true
 
 # ── Identity ───────────────────────────────────────────── (required) ──
-name: "Git Vitae"              # Your name — shown in the header and used as a fallback in the avatar
-title: "Portfolio-Resume Engineer"
-tagline: "I build free portfolios and resumes for everyone."
-email: "git-vitae@proton.me"
-phone: ""                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
-location: "San Francisco, CA"
-avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12"  # Demo avatar — replace with your own photo URL (see instructions below)
-# How to add a profile photo (free, no extra account needed):
-#   1. Go to your GitHub repo → click "Add file" → "Upload files"
-#   2. Upload your photo (e.g. avatar.jpg) into a folder called "public/"
-#   3. After committing, open the file on GitHub and copy the raw URL:
-#      https://raw.githubusercontent.com/YOU/your-repo/main/public/avatar.jpg
-#   4. Paste that URL here.
-# Leave empty to show your initials as a styled placeholder.
+name: "ESHWAR MURUGAIYAN"
+title: "Mechanical & Robotics Engineer"
+tagline: "Process Development • Automation • R&D"
+email: "eshwar.murugaiyan@gmail.com"
+phone: "+44 7587737044"
+location: "United Kingdom"
+LinkedinUrl: "https://www.linkedin.com/in/eshwar-murugaiyan-104655299"
 
 # ── Resume download ────────────────────────────────────────────────────
-# Optional: link directly to a hosted PDF (Google Drive, Dropbox, etc.)
-# If left blank the navbar "Resume" button opens the built-in resume page
-# where visitors can use "Save PDF" to print their own copy.
-#
-# How to get a direct download link:
-#   1. Visit /resume in your portfolio, click "Save PDF" -> save the file
-#   2. Upload that PDF to Google Drive / Dropbox and copy the direct link
-#   3. Paste the link below and update resumeFileName accordingly
-#
 # resumeUrl: "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
-# resumeFileName: "Git_Vitae_Resume.pdf"
+# resumeFileName: "Eshwar_Murugaiyan_CV.pdf"
 
 # ── Status ─────────────────────────────────────────────────────────────
-openToWork: true         # Shows "Open to Opportunities" banner when true
+openToWork: true
 
 # ── Theme ──────────────────────────────────────────────────────────────
-defaultTheme: "system"   # Options: light | dark | system
-colorPreset: "indigo"    # Options: indigo | emerald | rose | amber | ocean | slate | custom
-# primaryColor: "#6366f1" # Optional — pick any colour you like and paste its hex code here.
-                           # Overrides colorPreset above. To find a hex code:
-                           #   → Google "colour picker", pick a colour, copy the 6-digit code (e.g. #e11d48)
-                           #   → or grab one from coolors.co / your favourite site's colour
+defaultTheme: "system"
+colorPreset: "ocean"
 
 resumeTheme:
-  twoColumn: "indigo"    # Accent color for the two-column resume layout
-  classic: "emerald"     # Accent color for the classic resume layout
+  twoColumn: "ocean"
+  classic: "emerald"
 
-contactFormEndpoint: ""  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
-                           # or any POST endpoint that accepts {name, email, message}.
-                           # Leave empty to use a pre-filled mailto: link instead.
+contactFormEndpoint: ""
 
 # ── Section visibility ─────────────────────────────────────────────────
-# Set show: false to hide any section from your portfolio
 sections:
   - { id: about,          show: true  }
-  - { id: stats,          show: false }  # Stats already appear as cards in the About section above — enable this only if you want a dedicated full-width stats section
+  - { id: stats,          show: false }
   - { id: skills,         show: true  }
   - { id: languages,      show: true  }
   - { id: experience,     show: true  }
   - { id: projects,       show: true  }
   - { id: education,      show: true  }
   - { id: certifications, show: true  }
-  - { id: publications,   show: false }
-  - { id: testimonials,   show: true  }
+  - { id: publications,   show: true  }
+  - { id: testimonials,   show: false }
   - { id: contact,        show: true  }
 
 # ── Social links ───────────────────────────── (leave blank to hide) ───
 social:
-  github:   "https://github.com/yourusername"
-  linkedin: "https://linkedin.com/in/yourusername"
+  github:   "https://github.com/EshwarMech"
+  linkedin: "https://www.linkedin.com/in/eshwar-murugaiyan-104655299"
   twitter:  ""
   website:  ""
 
 # ── About ──────────────────────────────────────────────────────────────
-# Use | for multi-line text. Indent each line by 2 spaces.
 about: |
-  I'm a portfolio-resume engineer with 5+ years of experience building products
-  that people love. I specialize in React, Node.js, and distributed systems.
-  When I'm not coding, I'm hiking trails or experimenting with new coffee
-  brewing methods.
+  I build, test, and validate electromechanical systems from CAD concept through to qualified, working prototype. My work focuses on process qualification, precision assembly, and system integration.
 
+  I hold an MSc in Robotics & Autonomous Systems (Merit) from the University of Sussex and a BEng in Mechanical Engineering (8.92/10 GPA). I have hands-on experience with PLC-controlled automation (Siemens), ROS2 mobile robotics, sensor integration, and technical documentation.
 
 # ── Stats ──────────────────────────────────────────────────────────────
-# Customise each label and value freely — change "Projects Shipped" to
-# "Active Customers", "Happy Clients", "Open Source Stars", etc.
-# Optional fields: prefix (e.g. "$") and suffix (e.g. "+" or "k").
-# Remove all entries or set show: false above to hide this section.
 stats:
-  - { label: "Years Experience", value: 5,    suffix: "+" }
-  - { label: "Projects Shipped", value: 20,   suffix: "+" }
-  - { label: "Happy Clients",    value: 50,   suffix: "+" }
-  - { label: "Cups of Coffee",   value: 1200, suffix: ""  }
-
-# Examples of other combinations you can use:
-#   - { label: "Active Users",    value: 10000, suffix: "+" }
-#   - { label: "Revenue",         value: 2,     prefix: "$", suffix: "M+" }
-#   - { label: "Countries",       value: 12,    suffix: ""  }
+  - { label: "Engineering Projects", value: 6,   suffix: "+" }
+  - { label: "CAD Tools",            value: 3,   suffix: ""  }
+  - { label: "Publications",         value: 1,   suffix: ""  }
+  - { label: "Years Hands-On",       value: 3,   suffix: "+" }
 
 # ── Languages ──────────────────────────────────────────────────────────
-# level options: Native | Fluent | Conversational | Basic
 languages:
-  - { name: "English",  level: "Native"        }
-  - { name: "Spanish",  level: "Conversational" }
-  - { name: "Mandarin", level: "Basic"          }
+  - { name: "English", level: "Fluent" }
+  - { name: "Tamil",   level: "Native" }
 
 # ── Skills ─────────────────────────────────────────────────────────────
 skills:
-  - category: "Frontend"
-    items: [React, TypeScript, Next.js, Tailwind CSS, Framer Motion]
-  - category: "Backend"
-    items: [Node.js, Express, PostgreSQL, Redis, GraphQL]
-  - category: "DevOps"
-    items: [Docker, AWS, CI/CD, Kubernetes, Terraform]
-  - category: "Tools"
-    items: [Git, Figma, Jest, Storybook, Datadog]
+  - category: "CAD & Design"
+    items: [SolidWorks, CATIA V5, AutoCAD, Engineering Drawings, BOMs]
+
+  - category: "Automation & Controls"
+    items: [Siemens PLC, Ladder Logic, ROS2, Sensor Integration, Real-Time Control]
+
+  - category: "Testing & Qualification"
+    items: [Test Procedures, FAT/SAT, Root Cause Analysis, PPM, Qualification Records]
+
+  - category: "Programming & Tools"
+    items: [Python, C++, MATLAB/Simulink, Git/GitHub, Microsoft Office]
+
+  - category: "Manufacturing"
+    items: [Electromechanical Assembly, PCB Soldering, DFM, Work Instructions, Lean/5S]
 
 # ── Experience ─────────────────────────────────────────────────────────
 experience:
-  - company: "Acme Corp"
-    role: "Senior Full-Stack Engineer"
-    period: "2022 – Present"
+  - company: "Ashok Leyland — Commercial Vehicle Manufacturing"
+    role: "Mechanical Technician"
+    period: "May 2019 – Oct 2019"
     description: |
-      Led migration of monolithic Rails app to microservices.
-      Reduced p99 latency by 60%. Mentored a team of 4 engineers.
+      Assembled precision mechanical sub-assemblies on a high-volume production line, working from technical drawings and maintaining strict tolerance and quality standards.
     highlights:
-      - Microservices migration
-      - 60% latency reduction
-      - Team leadership
+      - Reduced rework by 8% through early fault detection
+      - Conducted quality inspections and process compliance
+      - Maintained production documentation and H&S compliance
 
-  - company: "Startup XYZ"
-    role: "Software Engineer"
-    period: "2020 – 2022"
+  - company: "University of Sussex — MSc Dissertation"
+    role: "Research Engineer — Soft Actuator Sensing System"
+    period: "2023 – 2024"
     description: |
-      Built real-time collaboration features for a SaaS platform serving
-      50k users. Owned the entire frontend from scratch.
+      Designed, built, and qualified a hybrid Hall-effect and pneumatic sensing assembly for soft actuation, achieving ±0.1V/N sensitivity against defined specifications.
     highlights:
-      - Real-time collaboration
-      - 50k users
-      - Frontend ownership
+      - Developed test procedures and qualification records
+      - Root cause analysis reduced hysteresis from 15% to <5%
+      - Validated system against defined performance requirements
 
-  - company: "Freelance"
-    role: "Web Developer"
-    period: "2018 – 2020"
+  - company: "University of Sussex — MEng Coursework"
+    role: "Systems Integration Engineer — PLC, Robot & Vision"
+    period: "2023 – 2024"
     description: |
-      Delivered 20+ web projects for small businesses and agencies across
-      e-commerce, marketing, and internal tools.
+      Integrated a Siemens PLC-controlled system with a Mitsubishi RV-2F robot arm and Festo Vision components for automated sorting.
     highlights:
-      - 20+ projects
-      - E-commerce
-      - Internal tools
+      - Reduced cycle time by 15% through optimised PLC logic
+      - Developed and executed FAT/SAT-style validation procedures
+      - Documented integration process and test results
 
 # ── Projects ───────────────────────────────────────────────────────────
-# Set featured: true to show in the Featured section (max 3 recommended)
 projects:
-  - name: "OpenDesk"
-    description: "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets."
-    tags: [React, Go, WebSockets, PostgreSQL]
-    liveUrl: "https://opendesk.example.com"
-    repoUrl: "https://github.com/yourusername/opendesk"
-    featured: true
-
-  - name: "CodeLens"
-    description: "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace."
-    tags: [TypeScript, OpenAI, "VS Code API"]
+  - name: "Soft Actuator Sensing System"
+    description: "Designed and qualified a hybrid Hall-effect + pneumatic sensing assembly with Raspberry Pi controller. Achieved ±0.1V/N sensitivity and reduced hysteresis from 15% to <5% through root cause analysis."
+    tags: [Test & Qualification, Sensor Integration, Raspberry Pi, Python]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/codelens"
+    repoUrl: "https://github.com/EshwarMech"
     featured: true
 
-  - name: "PriceWatch"
-    description: "Browser extension that tracks price history on e-commerce sites and alerts users to drops."
-    tags: [JavaScript, "Chrome API", Node.js]
-    liveUrl: "https://pricewatch.example.com"
-    repoUrl: "https://github.com/yourusername/pricewatch"
+  - name: "Siemens PLC + Mitsubishi Robot + Festo Vision"
+    description: "Integrated a PLC-controlled automated sorting cell with robot arm and machine vision. Reduced cycle time by 15% and validated against technical specifications."
+    tags: [Siemens PLC, Robotics, Machine Vision, System Integration]
+    liveUrl: ""
+    repoUrl: "https://github.com/EshwarMech"
+    featured: true
+
+  - name: "ROS2 Mobile Robot — Complete Assembly"
+    description: "Built a complete mobile robot from component level using ROS2 and Python. Achieved 95% test-pass rate on autonomous navigation trials. Full assembly from CAD to bring-up."
+    tags: [ROS2, Python, Autonomous Navigation, Embedded Systems]
+    liveUrl: ""
+    repoUrl: "https://github.com/EshwarMech"
+    featured: true
+
+  - name: "3-DOF Human Tracking Robot"
+    description: "Independently designed, built, and debugged a real-time control system with Arduino, ESP32, and Python. Achieved human tracking within 0.5m accuracy."
+    tags: [Control Systems, Arduino, ESP32, Python]
+    liveUrl: ""
+    repoUrl: "https://github.com/EshwarMech"
     featured: false
 
-  - name: "Logbook"
-    description: "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users."
-    tags: ["React Native", SQLite, Crypto]
+  - name: "Multi-Operation Machining Unit"
+    description: "Designed in SolidWorks and physically built a multi-operation machining unit. Published findings in IJETMS as an undergraduate paper."
+    tags: [SolidWorks, Manufacturing, DFM, Publication]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/logbook"
+    repoUrl: "https://github.com/EshwarMech"
     featured: false
 
 # ── Education ──────────────────────────────────────────────────────────
 education:
-  - institution: "University of California, Berkeley"
-    degree: "B.S. Computer Science"
-    period: "2014 – 2018"
+  - institution: "University of Sussex, UK"
+    degree: "MSc Robotics and Autonomous Systems — Merit"
+    period: "2023 – 2024"
+
+  - institution: "SNS College of Technology (Anna University), India"
+    degree: "BEng Mechanical Engineering — GPA: 8.92/10"
+    period: "2020 – 2023"
 
 # ── Certifications ─────────────────────────────────────────────────────
 certifications:
-  - title: "AWS Certified Solutions Architect – Associate"
-    issuer: "Amazon Web Services"
-    date: "2023"
-    credentialUrl: "https://aws.amazon.com/verification"
-    badgeUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
-    tags: [Cloud, Architecture, AWS]
-
-  - title: "Professional Scrum Master I"
-    issuer: "Scrum.org"
-    date: "2022"
-    credentialUrl: "https://www.scrum.org/certificates"
-    badgeUrl: "https://images.credly.com/size/340x340/images/a2790314-008a-4c3d-9e11-2a8f48155adc/image.png"
-    tags: [Agile, Scrum, Leadership]
-
-  - title: "Google Professional Data Engineer"
-    issuer: "Google Cloud"
-    date: "2021"
-    credentialUrl: ""
+  - title: "SolidWorks Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/cee5edb45195b218b253a879446835a9d2c393876980062e1d8c8df97c7f1835?u=83331314"
     badgeUrl: ""
-    tags: [Data, GCP, BigQuery]
+    tags: [CAD, SolidWorks, Design]
 
+  - title: "CATIA V5 Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/89c79f2742b48672f78cdba3615273a5896daaf656dc6cc5cfcb9cfc70d351d9?u=83331314"
+    badgeUrl: ""
+    tags: [CAD, CATIA, Design]
+
+  - title: "AutoCAD Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/38982a8434dabe25c7ea0702ab5d8671aa535c43d9d438fc55e3524c89905539"
+    badgeUrl: ""
+    tags: [CAD, AutoCAD, Design]
+
+  - title: "Python Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/6437a5d2c13ca8c2c423898465b0608ac5cd926a4ead6509ceffff024c5477ef"
+    badgeUrl: ""
+    tags: [Programming, Python]
+
+  - title: "MATLAB/Simulink Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/a3cb89399df8dfff804c724fdac5e2a1ef11925bc294b093d8642fbf5d24f689?u=83331314"
+    badgeUrl: ""
+    tags: [Simulation, MATLAB, Control]
+
+  - title: "Siemens Ladder Logic Certification"
+    issuer: "LinkedIn Learning"
+    date: "2024"
+    credentialUrl: "https://www.linkedin.com/learning/certificates/836dea3f5200ee3317e8e8dced3209f1b14972863914b6209647056fe27f99db"
+    badgeUrl: ""
+    tags: [PLC, Siemens, Automation]
 
 # ── Publications ───────────────────────────────────────────────────────
-# Optional — ideal for researchers, academics, and technical writers.
-# type options: conference | journal | preprint | book-chapter | workshop
 publications:
-  - title: "Scaling Real-Time Collaboration in Distributed Systems"
-    authors: "Rivera A, Chen L, Patel S"
-    venue: "USENIX ATC 2023"
+  - title: "Design and Fabrication of Multi-Operation Machining Unit"
+    authors: "Eshwar Murugaiyan"
+    venue: "IJETMS"
     year: "2023"
-    url: "https://arxiv.org/abs/example"
-    type: "conference"
-    tags: [distributed-systems, real-time, scalability]
-
-  - title: "Micro-Frontend Architecture Patterns for Large-Scale SPAs"
-    authors: "Rivera A"
-    venue: "IEEE Software"
-    year: "2022"
-    url: ""
+    url: "https://ijetms.in/Vol-7-issue-3/Vol-7-Issue-3-24.pdf"
     type: "journal"
-    tags: [frontend, architecture, micro-frontends]
+    tags: [mechanical-design, manufacturing, prototype-validation]
 
 # ── Testimonials ───────────────────────────────────────────────────────
-testimonials:
-  - name: "Sarah Chen"
-    title: "Engineering Manager"
-    company: "Acme Corp"
-    relationship: "Manager"   # e.g. Manager | Colleague | Client | Mentor
-    quote: |
-      Alex is one of the most thoughtful engineers I've had the pleasure of
-      working with. They consistently delivered high-quality work on time and
-      elevated the entire team's standards.
-    photoUrl: ""              # URL to headshot — leave empty for initials
+testimonials: []
 
-  - name: "James Okafor"
-    title: "Senior Product Designer"
-    company: "Startup XYZ"
-    relationship: "Colleague"
-    quote: |
-      Working with Alex was a joy. They have a rare ability to translate vague
-      product requirements into clean, elegant code. Our collaboration made the
-      product significantly better.
-    photoUrl: ""
-
-  - name: "Priya Nair"
-    title: "CTO"
-    company: "FinTech Ventures"
-    relationship: "Client"
-    quote: |
-      Alex delivered the project ahead of schedule and the code quality was
-      exceptional. They communicated proactively, flagged risks early, and were
-      genuinely invested in our success.
-    photoUrl: ""
-
-# ── Analytics (optional, always free) ──────────────────────────────────────
-# Two ways to track who visits your portfolio — both free, no credit card:
-#
-# 1. GitHub built-in traffic (zero setup — already there!)
-#    Go to your repository → Insights → Traffic.
-#    Shows unique visitors, page views, and top referrers for the last 14 days.
-#
-# 2. GoatCounter (more detail, privacy-friendly, free forever for personal use)
-#    Sign up at https://www.goatcounter.com — you'll get a short code, e.g. "janedoe"
-#    Uncomment the two lines below and replace "yourcode" with your GoatCounter code:
-#
-# analytics:
-#   goatcounterCode: "yourcode"
-
-# ── Blog ─────────────────────────────────────────────────────────────────────
-# Drop any .md file into the blog/ folder — it becomes a post automatically.
-# Each post starts with a small block called "frontmatter" (between --- lines):
-#
-#   ---
-#   title: "My Post Title"
-#   date: "2025-01-15"
-#   tags: [life, tech]
-#   excerpt: "One sentence that appears on the listing page."
-#   ---
-#
-# Then write your post in plain Markdown below the closing ---.
-# See the sample posts in blog/ to get started.
+# ── Blog ───────────────────────────────────────────────────────────────
 blog:
-  enabled: true
+  enabled: false
   title: "Blog"
-  description: "Thoughts, stories and ideas — everything in one place."
+  description: "Thoughts on engineering, automation, and R&D."

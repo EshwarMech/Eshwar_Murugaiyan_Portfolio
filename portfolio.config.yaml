@@ -74,8 +74,8 @@ stats:
     value: 1
     suffix: ""
   - label: "Years Hands-On"
-    value: 3
-    suffix: "+"
+    value: Recent graduate
+    suffix: ""
 
 # ── Languages ──────────────────────────────────────────────────────────
 languages:

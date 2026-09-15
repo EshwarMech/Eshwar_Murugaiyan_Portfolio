@@ -64,10 +64,18 @@ about: |
 
 # ── Stats ──────────────────────────────────────────────────────────────
 stats:
-  - { label: "Engineering Projects", value: 5, suffix: "+" }
-  - { label: "CAD Tools",            value: 3, suffix: ""  }
-  - { label: "Publications",         value: 1, suffix: ""  }
-  - { label: "Years Hands-On",       value: 3, suffix: "+" }
+  - label: "Engineering Projects"
+    value: 5
+    suffix: "+"
+  - label: "CAD Tools"
+    value: 3
+    suffix: ""
+  - label: "Publications"
+    value: 1
+    suffix: ""
+  - label: "Years Hands-On"
+    value: 3
+    suffix: "+"
 
 # ── Languages ──────────────────────────────────────────────────────────
 languages:

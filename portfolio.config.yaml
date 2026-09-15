@@ -1,0 +1,310 @@
+# ╔══════════════════════════════════════════════════════════════════════╗
+# ║              GitVitae — Portfolio Configuration                      ║
+# ║  This is the only file you need to edit.                             ║
+# ║  Run  pnpm check-config  to catch mistakes before deploying.         ║
+# ╚══════════════════════════════════════════════════════════════════════╝
+
+# ╔══════════════════════════════════════════════════════════════════════╗
+# ║  ** FIRST THING TO CHANGE **                                         ║
+# ║                                                                      ║
+# ║  siteMode: "landing"  → shows the GitVitae intro page (default)      ║
+# ║  siteMode: "portfolio" → shows YOUR portfolio                        ║
+# ║                                                                      ║
+# ║  Change it to "portfolio" once you have filled in your details.      ║
+# ╚══════════════════════════════════════════════════════════════════════╝
+siteMode: "landing"   # ← CHANGE THIS to "portfolio"
+siteUrl:  "https://yourusername.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
+showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
+
+# ── Identity ───────────────────────────────────────────── (required) ──
+name: "Git Vitae"              # Your name — shown in the header and used as a fallback in the avatar
+title: "Portfolio-Resume Engineer"
+tagline: "I build free portfolios and resumes for everyone."
+email: "git-vitae@proton.me"
+phone: ""                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
+location: "San Francisco, CA"
+avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12"  # Demo avatar — replace with your own photo URL (see instructions below)
+# How to add a profile photo (free, no extra account needed):
+#   1. Go to your GitHub repo → click "Add file" → "Upload files"
+#   2. Upload your photo (e.g. avatar.jpg) into a folder called "public/"
+#   3. After committing, open the file on GitHub and copy the raw URL:
+#      https://raw.githubusercontent.com/YOU/your-repo/main/public/avatar.jpg
+#   4. Paste that URL here.
+# Leave empty to show your initials as a styled placeholder.
+
+# ── Resume download ────────────────────────────────────────────────────
+# Optional: link directly to a hosted PDF (Google Drive, Dropbox, etc.)
+# If left blank the navbar "Resume" button opens the built-in resume page
+# where visitors can use "Save PDF" to print their own copy.
+#
+# How to get a direct download link:
+#   1. Visit /resume in your portfolio, click "Save PDF" -> save the file
+#   2. Upload that PDF to Google Drive / Dropbox and copy the direct link
+#   3. Paste the link below and update resumeFileName accordingly
+#
+# resumeUrl: "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
+# resumeFileName: "Git_Vitae_Resume.pdf"
+
+# ── Status ─────────────────────────────────────────────────────────────
+openToWork: true         # Shows "Open to Opportunities" banner when true
+
+# ── Theme ──────────────────────────────────────────────────────────────
+defaultTheme: "system"   # Options: light | dark | system
+colorPreset: "indigo"    # Options: indigo | emerald | rose | amber | ocean | slate | custom
+# primaryColor: "#6366f1" # Optional — pick any colour you like and paste its hex code here.
+                           # Overrides colorPreset above. To find a hex code:
+                           #   → Google "colour picker", pick a colour, copy the 6-digit code (e.g. #e11d48)
+                           #   → or grab one from coolors.co / your favourite site's colour
+
+resumeTheme:
+  twoColumn: "indigo"    # Accent color for the two-column resume layout
+  classic: "emerald"     # Accent color for the classic resume layout
+
+contactFormEndpoint: ""  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
+                           # or any POST endpoint that accepts {name, email, message}.
+                           # Leave empty to use a pre-filled mailto: link instead.
+
+# ── Section visibility ─────────────────────────────────────────────────
+# Set show: false to hide any section from your portfolio
+sections:
+  - { id: about,          show: true  }
+  - { id: stats,          show: false }  # Stats already appear as cards in the About section above — enable this only if you want a dedicated full-width stats section
+  - { id: skills,         show: true  }
+  - { id: languages,      show: true  }
+  - { id: experience,     show: true  }
+  - { id: projects,       show: true  }
+  - { id: education,      show: true  }
+  - { id: certifications, show: true  }
+  - { id: publications,   show: false }
+  - { id: testimonials,   show: true  }
+  - { id: contact,        show: true  }
+
+# ── Social links ───────────────────────────── (leave blank to hide) ───
+social:
+  github:   "https://github.com/yourusername"
+  linkedin: "https://linkedin.com/in/yourusername"
+  twitter:  ""
+  website:  ""
+
+# ── About ──────────────────────────────────────────────────────────────
+# Use | for multi-line text. Indent each line by 2 spaces.
+about: |
+  I'm a portfolio-resume engineer with 5+ years of experience building products
+  that people love. I specialize in React, Node.js, and distributed systems.
+  When I'm not coding, I'm hiking trails or experimenting with new coffee
+  brewing methods.
+
+
+# ── Stats ──────────────────────────────────────────────────────────────
+# Customise each label and value freely — change "Projects Shipped" to
+# "Active Customers", "Happy Clients", "Open Source Stars", etc.
+# Optional fields: prefix (e.g. "$") and suffix (e.g. "+" or "k").
+# Remove all entries or set show: false above to hide this section.
+stats:
+  - { label: "Years Experience", value: 5,    suffix: "+" }
+  - { label: "Projects Shipped", value: 20,   suffix: "+" }
+  - { label: "Happy Clients",    value: 50,   suffix: "+" }
+  - { label: "Cups of Coffee",   value: 1200, suffix: ""  }
+
+# Examples of other combinations you can use:
+#   - { label: "Active Users",    value: 10000, suffix: "+" }
+#   - { label: "Revenue",         value: 2,     prefix: "$", suffix: "M+" }
+#   - { label: "Countries",       value: 12,    suffix: ""  }
+
+# ── Languages ──────────────────────────────────────────────────────────
+# level options: Native | Fluent | Conversational | Basic
+languages:
+  - { name: "English",  level: "Native"        }
+  - { name: "Spanish",  level: "Conversational" }
+  - { name: "Mandarin", level: "Basic"          }
+
+# ── Skills ─────────────────────────────────────────────────────────────
+skills:
+  - category: "Frontend"
+    items: [React, TypeScript, Next.js, Tailwind CSS, Framer Motion]
+  - category: "Backend"
+    items: [Node.js, Express, PostgreSQL, Redis, GraphQL]
+  - category: "DevOps"
+    items: [Docker, AWS, CI/CD, Kubernetes, Terraform]
+  - category: "Tools"
+    items: [Git, Figma, Jest, Storybook, Datadog]
+
+# ── Experience ─────────────────────────────────────────────────────────
+experience:
+  - company: "Acme Corp"
+    role: "Senior Full-Stack Engineer"
+    period: "2022 – Present"
+    description: |
+      Led migration of monolithic Rails app to microservices.
+      Reduced p99 latency by 60%. Mentored a team of 4 engineers.
+    highlights:
+      - Microservices migration
+      - 60% latency reduction
+      - Team leadership
+
+  - company: "Startup XYZ"
+    role: "Software Engineer"
+    period: "2020 – 2022"
+    description: |
+      Built real-time collaboration features for a SaaS platform serving
+      50k users. Owned the entire frontend from scratch.
+    highlights:
+      - Real-time collaboration
+      - 50k users
+      - Frontend ownership
+
+  - company: "Freelance"
+    role: "Web Developer"
+    period: "2018 – 2020"
+    description: |
+      Delivered 20+ web projects for small businesses and agencies across
+      e-commerce, marketing, and internal tools.
+    highlights:
+      - 20+ projects
+      - E-commerce
+      - Internal tools
+
+# ── Projects ───────────────────────────────────────────────────────────
+# Set featured: true to show in the Featured section (max 3 recommended)
+projects:
+  - name: "OpenDesk"
+    description: "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets."
+    tags: [React, Go, WebSockets, PostgreSQL]
+    liveUrl: "https://opendesk.example.com"
+    repoUrl: "https://github.com/yourusername/opendesk"
+    featured: true
+
+  - name: "CodeLens"
+    description: "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace."
+    tags: [TypeScript, OpenAI, "VS Code API"]
+    liveUrl: ""
+    repoUrl: "https://github.com/yourusername/codelens"
+    featured: true
+
+  - name: "PriceWatch"
+    description: "Browser extension that tracks price history on e-commerce sites and alerts users to drops."
+    tags: [JavaScript, "Chrome API", Node.js]
+    liveUrl: "https://pricewatch.example.com"
+    repoUrl: "https://github.com/yourusername/pricewatch"
+    featured: false
+
+  - name: "Logbook"
+    description: "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users."
+    tags: ["React Native", SQLite, Crypto]
+    liveUrl: ""
+    repoUrl: "https://github.com/yourusername/logbook"
+    featured: false
+
+# ── Education ──────────────────────────────────────────────────────────
+education:
+  - institution: "University of California, Berkeley"
+    degree: "B.S. Computer Science"
+    period: "2014 – 2018"
+
+# ── Certifications ─────────────────────────────────────────────────────
+certifications:
+  - title: "AWS Certified Solutions Architect – Associate"
+    issuer: "Amazon Web Services"
+    date: "2023"
+    credentialUrl: "https://aws.amazon.com/verification"
+    badgeUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+    tags: [Cloud, Architecture, AWS]
+
+  - title: "Professional Scrum Master I"
+    issuer: "Scrum.org"
+    date: "2022"
+    credentialUrl: "https://www.scrum.org/certificates"
+    badgeUrl: "https://images.credly.com/size/340x340/images/a2790314-008a-4c3d-9e11-2a8f48155adc/image.png"
+    tags: [Agile, Scrum, Leadership]
+
+  - title: "Google Professional Data Engineer"
+    issuer: "Google Cloud"
+    date: "2021"
+    credentialUrl: ""
+    badgeUrl: ""
+    tags: [Data, GCP, BigQuery]
+
+
+# ── Publications ───────────────────────────────────────────────────────
+# Optional — ideal for researchers, academics, and technical writers.
+# type options: conference | journal | preprint | book-chapter | workshop
+publications:
+  - title: "Scaling Real-Time Collaboration in Distributed Systems"
+    authors: "Rivera A, Chen L, Patel S"
+    venue: "USENIX ATC 2023"
+    year: "2023"
+    url: "https://arxiv.org/abs/example"
+    type: "conference"
+    tags: [distributed-systems, real-time, scalability]
+
+  - title: "Micro-Frontend Architecture Patterns for Large-Scale SPAs"
+    authors: "Rivera A"
+    venue: "IEEE Software"
+    year: "2022"
+    url: ""
+    type: "journal"
+    tags: [frontend, architecture, micro-frontends]
+
+# ── Testimonials ───────────────────────────────────────────────────────
+testimonials:
+  - name: "Sarah Chen"
+    title: "Engineering Manager"
+    company: "Acme Corp"
+    relationship: "Manager"   # e.g. Manager | Colleague | Client | Mentor
+    quote: |
+      Alex is one of the most thoughtful engineers I've had the pleasure of
+      working with. They consistently delivered high-quality work on time and
+      elevated the entire team's standards.
+    photoUrl: ""              # URL to headshot — leave empty for initials
+
+  - name: "James Okafor"
+    title: "Senior Product Designer"
+    company: "Startup XYZ"
+    relationship: "Colleague"
+    quote: |
+      Working with Alex was a joy. They have a rare ability to translate vague
+      product requirements into clean, elegant code. Our collaboration made the
+      product significantly better.
+    photoUrl: ""
+
+  - name: "Priya Nair"
+    title: "CTO"
+    company: "FinTech Ventures"
+    relationship: "Client"
+    quote: |
+      Alex delivered the project ahead of schedule and the code quality was
+      exceptional. They communicated proactively, flagged risks early, and were
+      genuinely invested in our success.
+    photoUrl: ""
+
+# ── Analytics (optional, always free) ──────────────────────────────────────
+# Two ways to track who visits your portfolio — both free, no credit card:
+#
+# 1. GitHub built-in traffic (zero setup — already there!)
+#    Go to your repository → Insights → Traffic.
+#    Shows unique visitors, page views, and top referrers for the last 14 days.
+#
+# 2. GoatCounter (more detail, privacy-friendly, free forever for personal use)
+#    Sign up at https://www.goatcounter.com — you'll get a short code, e.g. "janedoe"
+#    Uncomment the two lines below and replace "yourcode" with your GoatCounter code:
+#
+# analytics:
+#   goatcounterCode: "yourcode"
+
+# ── Blog ─────────────────────────────────────────────────────────────────────
+# Drop any .md file into the blog/ folder — it becomes a post automatically.
+# Each post starts with a small block called "frontmatter" (between --- lines):
+#
+#   ---
+#   title: "My Post Title"
+#   date: "2025-01-15"
+#   tags: [life, tech]
+#   excerpt: "One sentence that appears on the listing page."
+#   ---
+#
+# Then write your post in plain Markdown below the closing ---.
+# See the sample posts in blog/ to get started.
+blog:
+  enabled: true
+  title: "Blog"
+  description: "Thoughts, stories and ideas — everything in one place."

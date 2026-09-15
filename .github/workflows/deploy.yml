@@ -1,0 +1,99 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Validate portfolio.config.yaml
+        id: validate
+        run: node scripts/check-config.mjs
+
+      - name: Config validation failed — help message
+        if: failure() && steps.validate.conclusion == 'failure'
+        run: |
+          echo ""
+          echo "──────────────────────────────────────────────────────────────────"
+          echo "  Deployment blocked: portfolio.config.yaml has errors."
+          echo ""
+          echo "  1. Open portfolio.config.yaml in your repo"
+          echo "  2. Fix the fields marked ✗ in the log above"
+          echo "  3. Commit and push — the deploy will retry automatically"
+          echo ""
+          echo "  Run  pnpm check-config  locally to preview all issues before"
+          echo "  pushing."
+          echo "──────────────────────────────────────────────────────────────────"
+          echo ""
+
+      - name: Detect base path
+        id: base
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
+          if [ "$REPO" = "${OWNER}.github.io" ]; then
+            echo "value=/" >> $GITHUB_OUTPUT
+          else
+            echo "value=/${REPO}/" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Detect demo mode
+        id: demo
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
+          if [ "$OWNER" = "git-vitae" ] && [ "$REPO" = "git-vitae.github.io" ]; then
+            echo "value=true" >> $GITHUB_OUTPUT
+          else
+            echo "value=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build
+        run: pnpm build
+        env:
+          VITE_DEMO_MODE: ${{ steps.demo.outputs.value }}
+          NODE_ENV: production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
